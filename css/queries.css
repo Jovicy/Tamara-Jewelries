@@ -1,0 +1,16 @@
+@media (max-width: 900px) {
+    .inside-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inside-main,
+    .inside-side,
+    .inside-small,
+    .inside-wide {
+        grid-column: auto;
+    }
+
+    .inside-card {
+        width: 80%;
+    }
+}

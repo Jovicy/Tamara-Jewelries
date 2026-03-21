@@ -30,3 +30,16 @@ questions.forEach((question) => {
     }
   });
 });
+
+const contents = document.querySelectorAll(".values-content");
+const button = document.querySelector(".values-toggle");
+
+let index = 0;
+
+button.addEventListener("click", () => {
+  contents[index].classList.remove("active");
+
+  index = (index + 1) % contents.length;
+
+  contents[index].classList.add("active");
+});
