@@ -8,6 +8,47 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Navbar
+// Navbar scroll effect and mobile menu toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  // Navbar scroll effect
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+
+  // Mobile menu toggle
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+    menuToggle.querySelector("i").classList.toggle("fa-bars");
+    menuToggle.querySelector("i").classList.toggle("fa-times");
+  });
+
+  // Close mobile menu when clicking on a link
+  document.querySelectorAll(".mobile-nav-list a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      menuToggle.querySelector("i").classList.remove("fa-times");
+      menuToggle.querySelector("i").classList.add("fa-bars");
+    });
+  });
+
+  // Close mobile menu on outside click
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target)) {
+      mobileMenu.classList.remove("active");
+      menuToggle.querySelector("i").classList.remove("fa-times");
+      menuToggle.querySelector("i").classList.add("fa-bars");
+    }
+  });
+});
 // Faq Page
 const questions = document.querySelectorAll(".faq-question");
 

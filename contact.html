@@ -17,7 +17,8 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container container">
-            <ul class="nav-list flex">
+            <!-- Left navigation (hidden on mobile) -->
+            <ul class="nav-list nav-list-left flex">
                 <a href="./about.html">
                     <li>Our Story</li>
                 </a>
@@ -28,12 +29,16 @@
                     <li>Gold</li>
                 </a>
             </ul>
+
+            <!-- Logo in center on mobile -->
             <div class="nav-logo">
                 <a href="index.html">
                     <img src="./img/logo.jpeg" alt="Tamara & Fraser Jewelleries Logo">
                 </a>
             </div>
-            <ul class="nav-list flex">
+
+            <!-- Right navigation (hidden on mobile) -->
+            <ul class="nav-list nav-list-right flex">
                 <a href="./silver.html">
                     <li>Silver</li>
                 </a>
@@ -49,8 +54,29 @@
                     </a>
                 </div>
             </ul>
+
+            <!-- Mobile menu toggle first for mobile-first -->
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="./about.html">Our Story</a></li>
+                <li><a href="./jewelry.html">Jewelry</a></li>
+                <li><a href="./gold.html">Gold</a></li>
+                <li><a href="./silver.html">Silver</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-shopping-cont">
+                <a href="./cart.html"><i class="fa-solid fa-shopping-cart"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </div>
         </div>
     </nav>
+    
     <!-- Header -->
     <header class="gold-header">
         <div class="added-page container flex">
